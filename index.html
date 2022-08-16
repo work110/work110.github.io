@@ -2,26 +2,73 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Ou.Gen. Tech Lab 技術研究所</title>
-		<!-- web icon -->
-		<link rel="shortcut icon" href="icon.ico" >
-		<!-- bootstrap 3-->
-	   	<!-- CSS only -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rTTiRUKnSWaDu2FjhzWFl8/JuUZMlplyWE/djenb2LoKqkgLGfEGfSrL7XDLoB1M" crossorigin="anonymous">
-		<!-- JavaScript Bundle with Popper -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-Nj1D6pu2WnJojj+67GiU9ZFNwbl7bUWX5Kj5MS22C8bGjllemM9pvQyvj14zJb58" crossorigin="anonymous"></script>
+		<!-- 设置宽度是页面宽度 -->
+		<meta name="viewport" content="width=device-width,initial-sacle=1" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<title>社区</title>
+
 	</head>
+	<body>
 
-<!-- 页面框架3：后台式 【删除body】-->
-<!-- 顶部页面 -->
-<frameset rows=130,*" frameborder="0">
-	<frame src="t/3.html" name="top"></frame>
-	<!-- 下部左右页面 -->
-	<frameset cols="200,*" frameborder="1">
-		<frame src="l/1.html" name="left"></frame>
-		<frame src="r/1.html" name="right"></frame>
-	</frameset>
-</frameset>
+		<div class="bg">
+			<div class="container cbd">
+				<!-- 上部部分 -->
+				<div class="row">
 
-<!-- 在框架内页面设置指定跳转链接 <a href="t/2.html"  target="main">跳转</a> -->
+					<!--  小喇叭  -->
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+						<iframe src="t/3.html" width="100%" height="140px" class="bk top" scrolling="no"></iframe>
+					</div>
+
+					<!-- logo -->
+					<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+						<iframe src="l/1.html" width="100%" height="140px" class="bk" scrolling="no"></iframe>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+	<style type="text/css">
+	
+		.bg{
+			 background-color: #161B26; 
+		}
+	
+		.cbd {
+			background-color: #ffffff;
+
+			border-width: 0 1px 0 1px;
+			/* 宽度 */
+			border-style: solid;
+			/* 边框类型：solid实线 dashed虚线 dotted点线 double双线 */
+			border-color: rgb(208, 208, 208);
+			box-shadow: 1px 0px 3px 3px #ffffff;
+			/* 边框阴影：水平偏移 垂直偏移 模糊距离 阴影尺寸 颜色; */
+		}
+
+		.bk {
+			margin-bottom: 0.625rem;
+			/* 边框 */
+			border-width: 2px;
+			/* 宽度 */
+			border-style: solid;
+			/* 边框类型：solid实线 dashed虚线 dotted点线 double双线 */
+			border-color: rgb(208, 208, 208);
+			border-radius: 0.7em;
+			/* 边框圆角 设置百分比则为椭圆圆角 */
+			box-shadow: 2px 3px 2px 1px #adadad;
+			/* 边框阴影：水平偏移 垂直偏移 模糊距离 阴影尺寸 颜色; */
+		}
+
+		.top {
+			border-width: 0 2px 2px 2px;
+			/* 宽度 */
+			border-radius: 0 0 0.7em 0.7em;
+			/* 边框圆角 设置百分比则为椭圆圆角 */
+		}
+	</style>
 </html>
