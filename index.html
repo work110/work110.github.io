@@ -35,22 +35,27 @@
 	<style type="text/css">
 	
 		.bg{
-			 background-color: #161B26; 
+			 /* background-color: #161B26;  */
+			 background-image: url(webb-dark.png);
 		}
 	
 		.cbd {
-			background-color: #ffffff;
-
-			border-width: 0 1px 0 1px;
+			/* 背景 图片 */
+			background-image: url(webb.png);  /* url(1.png) no-repeat repeat-x/y */
+			 background-position: 9px 0px; /*背景图片定位，向右25px，向下8px */
+			/* border-width: 0 1px 0 1px; */
 			/* 宽度 */
-			border-style: solid;
+			/* border-style: solid; */
 			/* 边框类型：solid实线 dashed虚线 dotted点线 double双线 */
-			border-color: rgb(208, 208, 208);
-			box-shadow: 1px 0px 3px 3px #ffffff;
+			/* border-color: rgb(208, 208, 208); */
+			box-shadow: 1px 0px 10px 10px #ffffff;
 			/* 边框阴影：水平偏移 垂直偏移 模糊距离 阴影尺寸 颜色; */
 		}
 
 		.bk {
+			background-color: #ffffff; 
+			
+			background-attachment: fixed; /* 背景图片不受滚动条影响 */
 			margin-bottom: 0.625rem;
 			/* 边框 */
 			border-width: 2px;
