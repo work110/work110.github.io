@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- 设置宽度是页面宽度 -->
+		<meta name="viewport" content="width=device-width,initial-sacle=1" />
+		<link rel="stylesheet" type="text/css" href="static/css/bootstrap.css" />
+		<title>Ou.Gen. Tech FTY技術工房</title>
+
+           
+	</head>
+	<body>
+            
+		<div class="bg">
+            <!-- 音乐 （MP3、OGG、WAV） -->
+            <audio src="赤壁.mp3" controls autoplay="autoplay" loop="loop"  ></audio>
+		</div>
+
+        <!-- 标题 -->
+        <div class="title"> 
+            MyFavoriteMusic &nbsp;<br>
+        </div>
+        
+        <!-- 日期 -->
+        <!-- <div class="data"> 
+           &nbsp; ♥ &nbsp;
+        </div> -->
+                
+
+	</body>
+
+	<style type="text/css">
+		/* 整体背景 */
+        .bg{
+            background-color: rgb(240, 240, 240);
+            position: absolute;
+            
+            height: 100%;
+            width: 100%;
+            z-index: -999;
+		}
+
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        .title{
+            width: 100%;
+
+            /* 文本样式 */
+            font-size:normal; /* 大小 */
+            font-weight: bold; /* 粗细 */
+            color: rgb(255, 255, 255);  /* 颜色 */
+            
+            
+            /* 文本阴影 横向偏移 纵向偏移 模糊距离 颜色 */
+            text-shadow: 0rem 0rem 0.1pc rgb(255, 255, 255);
+            background-color: rgba(0, 0, 0, 0.312);
+
+            position: absolute;
+            bottom: 10px;
+            
+
+            /* 文本修饰 */
+            text-align: middle;  /* 对齐 */
+            text-decoration: none;  /* 划线 */
+            text-indent: 1em; /* 首行缩进 */
+        }
+
+        .data{
+            position: absolute;
+            top: 10px;
+            /* 文本样式 */
+            font-size:xx-large; /* 大小 */
+            font-weight: bold; /* 粗细 */
+            color: rgba(255, 255, 255, 0.26);  /* 颜色 */
+            
+            
+        }
+	</style>
+</html>
