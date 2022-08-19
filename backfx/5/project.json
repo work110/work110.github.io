@@ -1,0 +1,22 @@
+{
+	"contentrating" : "Everyone",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0.6784313725490196 0.8470588235294118 0.9019607843137255"
+			}
+		}
+	},
+	"preview" : "preview.jpg",
+	"tags" : [ "CGI" ],
+	"title" : "层层の云雾",
+	"type" : "web",
+	"version" : 0
+}
