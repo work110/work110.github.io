@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <style>
+            body { background-color: black; overflow: hidden;}
+            canvas { width: 100%; height: 100% }</style>
+        <script src="./node_modules/three/build/three.min.js"></script>
+        <script src="./node_modules/three/examples/js/postprocessing/Pass.js"></script>
+        <script src="./node_modules/three/examples/js/postprocessing/GlitchPass.js"></script>
+        <script src="./node_modules/three/examples/js/postprocessing/EffectComposer.js"></script>
+        <script src="./node_modules/three/examples/js/shaders/CopyShader.js"></script>
+        <script src="./node_modules/three/examples/js/shaders/DigitalGlitch.js"></script>
+        <script src="./node_modules/three/examples/js/postprocessing/RenderPass.js"></script>
+        <script src="./node_modules/three/examples/js/postprocessing/ShaderPass.js"></script>
+    </head>
+    <body>
+        <script>
+            function renderScene() {
+            var scene = new THREE.Scene();
+			var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 1, 10000);
+
+			var renderer = new THREE.WebGLRenderer();
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			document.body.appendChild(renderer.domElement);
+                // create a cube geometry
+                var geometry = new THREE.BoxGeometry( 100, 100, 100 );
+            var material = new THREE.MeshBasicMaterial(
+                {
+                    color: 0x00ffff, 
+                    wireframe: true
+                });
+
+            var cube = new THREE.Mesh(geometry, material);
+            scene.add(cube);
+
+            // create small spheres and save into an array
+            var update = [];
+            function drawArtifacts() {
+                if (update.length > 0) {
+                    for (var i = 0; i < update.length; i++) {
+                        scene.remove(update[i]);
+                    }
+                }
+                update = [];
+                
+                for (i = 0; i < 1000; i++) {
+                    var geometry = new THREE.SphereGeometry(Math.random() * 10, Math.random() * 10, Math.random() * 10);
+                    var material = new THREE.MeshBasicMaterial(
+                    {
+                        color:  Math.random() * 0xffffff, 
+                        wireframe: true
+                    });
+                    var artifact = new THREE.Mesh(geometry, material);
+                    artifact.position.x = Math.random() * 1000 - 500;
+                    artifact.position.y = Math.random() * 1000 - 500;
+                    artifact.position.z = Math.random() * 1000 - 500;
+                    scene.add(artifact);
+                    update.push(artifact);
+                }
+            }
+
+            camera.position.z = 1000;			
+			function render() {
+				requestAnimationFrame(render);
+                
+                // make spheres move outside the cube
+                for (var i = 0; i < update.length; i++) {
+                    update[i].position.x += Math.random() * 10 - 5;
+                    update[i].position.y += Math.random() * 10 - 5;
+                    update[i].position.z += Math.random() * 10 - 5;
+                }
+                cube.rotation.x += 0.01;
+				cube.rotation.y += 0.01;
+				cube.rotation.z += 0.01;
+                camera.lookAt(cube.position);
+
+				renderer.render(scene, camera);
+                composer.render();
+			};
+
+            // apply glitch post processing
+            var composer = new THREE.EffectComposer(renderer);
+            var renderPass = new THREE.RenderPass(scene, camera);
+            composer.addPass(renderPass);
+            var glitchPass = new THREE.GlitchPass();
+            composer.addPass(glitchPass);
+            glitchPass.renderToScreen = true;
+
+            // when the composer renders, draw artifacts
+            composer.onRender = drawArtifacts;
+
+
+
+			render();
+
+            function artifactReset() {
+                drawArtifacts();
+                setTimeout(artifactReset, 20000);
+            }
+            artifactReset();
+        }
+        renderScene();
+        </script>
+    </body>
+</html>

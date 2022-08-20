@@ -1,0 +1,23 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "internet.com background wallpaper\n\nnothing is made by me, i do not own nothing, i just liked the background.\n\nContact me if you are the owner or affiliated to such subject and want or require to hide or delete this content.",
+	"file" : "Internet.com.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "1 1 1"
+			}
+		}
+	},
+	"preview" : "preview.jpg",
+	"tags" : [ "Abstract" ],
+	"title" : "Internet.com Wallpaper",
+	"type" : "web",
+	"version" : 0
+}

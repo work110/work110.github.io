@@ -1,0 +1,25 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "#eva  #新世纪福音战士 #clock\n来源：github.com/Wandmalfarbe/evangelion-clock-screensaver\n（还有red模式 可以自行更改）",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0 0 0"
+			}
+		}
+	},
+	"preview" : "preview.jpg",
+	"tags" : [ "Anime" ],
+	"title" : "新世纪福音战士 eva-clock",
+	"type" : "web",
+	"version" : 0,
+	"workshopid" : "2255557200",
+	"workshopurl" : "steam://url/CommunityFilePage/2255557200"
+}
